@@ -5,6 +5,8 @@
       <w>gdisconnect</w>
       <w>hamachi</w>
       <w>restaurantmenu</w>
+      <w>serializeable</w>
+      <w>tablename</w>
     </words>
   </dictionary>
 </component>
