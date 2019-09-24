@@ -3,7 +3,7 @@ import string
 from flask import Flask, render_template, request, redirect, jsonify, url_for, flash
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Restaurant, MenuItem
+from database_setup import Base, Restaurant, MenuItem, User
 from flask import session as login_session
 # New imports for this step
 from oauth2client.client import flow_from_clientsecrets
@@ -290,6 +290,12 @@ def deleteMenuItem(restaurant_id, menu_id):
         return redirect(url_for('showMenu', restaurant_id=restaurant_id))
     else:
         return render_template('deleteMenuItem.html', item=itemToDelete)
+
+
+def CreateUser(login_session):
+    new_user = User(name=login_session['username'], email=login_session['email'], picture=login_session['picture'])
+    session.add(new_user)
+    session.commit()
 
 
 if __name__ == '__main__':
