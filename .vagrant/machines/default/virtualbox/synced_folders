@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/basem/fullstack-nanodegree-vm/vagrant/OAuth2.0","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Basem/code/oauth","disabled":false,"__vagrantfile":true}}}
